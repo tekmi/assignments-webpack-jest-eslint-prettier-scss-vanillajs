@@ -39,8 +39,8 @@ It also feels fishy to me, I would rather use JSX, Handlebars or other JS templa
 ## Unit and Integration Tests
 
 I have chosen `jest` framework for unit and integration testing. It is fast, reliable and is maintained by Facebook. It comes bundled with assertions, spies and mocks. Moreover it provides snapshots and code coverage functionality.
-I have achieved 100% coverage, but it's only because it is a tiny project. My preferred coverage thresholds for greenfield projects are listed in package.json.
-I had some trouble to make JSDOM working properly inside `integration/templates/TemplateHandler.test.js`. I had to mock too much. If you know how to instruct JSDOM to listen on the `innerHTML` DOM element changes, please let know :-)
+I had some trouble with interaction tests and JSDOM, I feel like I had to mock too much. If you know how to instruct JSDOM to listen on the `innerHTML` DOM element changes, please let know :-)
+I have achieved 100% coverage, but it's only because it's a tiny project. With bigger teams, I would strive for something between 80-90%.
 
 | File                      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 |---------------------------|----------|----------|----------|----------|-------------------|
@@ -55,7 +55,7 @@ I had some trouble to make JSDOM working properly inside `integration/templates/
 To run all unit and integration tests with coverage
 
 ```
-test:unit:integration:coverage
+yarn test:unit:integration:coverage
 ```
 
 ## Functional Tests (End2End)
