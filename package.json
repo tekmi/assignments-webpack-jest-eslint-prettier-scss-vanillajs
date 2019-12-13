@@ -1,13 +1,15 @@
 {
   "name": "frontend-assignment",
   "version": "1.0.0",
-  "description": "A small assignment for frontend developers at Schiphol",
+  "description": "A small assignment with webpack, jest, eslint, scss and vanilla js",
   "main": "src/index.js",
   "scripts": {
     "test:unit": "jest tests/unit",
     "test:integration": "jest tests/integration",
     "test:unit:integration": "jest tests/",
     "test:unit:integration:coverage": "jest --coverage",
+    "test:functional:open": "cypress open",
+    "test:functional:run": "cypress run",
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "dev": "webpack --config webpack.dev.js",
     "prod": "webpack --config webpack.prod.js",
@@ -16,7 +18,12 @@
     "lint:fix": "eslint src/ --fix"
   },
   "author": "Adam Gegotek <a.gegotek@tekmi.nl>",
-  "license": "ISC",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.7.6",
+    "es6-promise": "^4.2.8",
+    "whatwg-fetch": "^3.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/plugin-transform-runtime": "^7.7.6",
@@ -26,6 +33,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.0",
     "css-loader": "^3.3.0",
+    "cypress": "^3.8.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.7.0",
@@ -45,14 +53,6 @@
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
   },
-  "browserslist": [
-    "defaults"
-  ],
-  "dependencies": {
-    "@babel/runtime": "^7.7.6",
-    "es6-promise": "^4.2.8",
-    "whatwg-fetch": "^3.0.0"
-  },
   "jest": {
     "automock": false,
     "setupFiles": [
@@ -68,9 +68,11 @@
       "<rootDir>/node_modules/",
       "<rootDir>/src/",
       "<rootDir>/public/",
-      "<rootDir>/coverage/"
+      "<rootDir>/tests/functional/"
     ],
-    "coverageReporters": [ "text" ],
+    "coverageReporters": [
+      "text"
+    ],
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
@@ -84,5 +86,8 @@
         "statements": 90
       }
     }
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

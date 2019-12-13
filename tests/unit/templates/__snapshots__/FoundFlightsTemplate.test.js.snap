@@ -28,7 +28,7 @@ exports[`FoundFlightsTemplate renders results group with all flight information 
   <p class=\\"rw-autosuggest__title\\">Looking for this flight?</p>
   <ul class=\\"rw-autosuggest-group\\">
     
-<li class=\\"rw-autosuggest__results-item\\">
+<li class=\\"rw-autosuggest__results-item\\" data-ft-element=\\"flights-search-results-found\\">
   <span class=\\"rw-autosuggest-group__flightnumber\\">UA 989</span>
   <span class=\\"rw-autosuggest-group__airport\\">San Francisco</span>
   <div class=\\"rw-autosuggest-group__time\\">
@@ -47,7 +47,7 @@ exports[`FoundFlightsTemplate renders results group with empty flight 1`] = `
   <p class=\\"rw-autosuggest__title\\">Looking for this flight?</p>
   <ul class=\\"rw-autosuggest-group\\">
     
-<li class=\\"rw-autosuggest__results-item\\">
+<li class=\\"rw-autosuggest__results-item\\" data-ft-element=\\"flights-search-results-found\\">
   <span class=\\"rw-autosuggest-group__flightnumber\\">undefined</span>
   <span class=\\"rw-autosuggest-group__airport\\">undefined</span>
   <div class=\\"rw-autosuggest-group__time\\">
