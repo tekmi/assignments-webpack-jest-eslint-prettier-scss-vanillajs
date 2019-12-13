@@ -19,7 +19,6 @@ export default class FlightsApi {
 
       return flights.filter(flight => flightRegex.test(flight.airport) || flightRegex.test(flight.flightNumber));
     } catch (e) {
-      console.error(e); // eslint-disable-line no-console
       return [];
     }
   }

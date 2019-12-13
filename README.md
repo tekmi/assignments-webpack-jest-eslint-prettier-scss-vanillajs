@@ -29,27 +29,21 @@ But it feels a bit fishy that way, I would rather go for some SPA framework like
 When it comes to templating, I wanted to keep it also as simple as possible, so I've chosen ES6 Template Literals and simple `innerHTML` to place it in in a given DOM element. 
 It also feels fishy to me, I would rather use JSX, Handlebars or other JS templating engine.
 
-Please create a page that contains an input field.
-When the user enters *at least* three characters into this input field,
-you should display all flight information from the `flights.json` file where the destination matches the entered input.
-Do this by using vanilla Javascript.
+## Unit and Integration Tests
 
-We think 4 hours should be enough to spend on this assignment.
-Please don't spend more than that unless you're having fun and want to show off :)
+I have chosen `jest` framework for unit and integration testing. It is fast, reliable and is maintained by Facebook. It comes bundled with assertions, spies and mocks. Moreover it provides snapshots and code coverage functionality.
+I have achieved 100% coverage, but it's only because it is a tiny project. My preferred coverage thresholds for greenfield projects are listed in package.json.
+I had some trouble to make JSDOM working properly inside `integration/templates/TemplateHandler.test.js`. I had to mock too much. If you know how to instruct JSDOM to listen on the `innerHTML` DOM element changes, please let know :-)
 
-## Requirement:
-- Use Webpack to build an ES5 bundle of your program.
-- Make it look nice. Make sure Webpack also packages your styles. We have provided some internal SCSS files in the `/sass` directory from our internal setup.
-You can read about these on [http://takeoff.schiphol.nl/component/style-fundamentals](http://takeoff.schiphol.nl/component/style-fundamentals)
-- Your application should treat the contents of `flights.json` as the output of an API endpoint.
-It should load this via xhr and should not require a page load when the user changes their input.
+|File                      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+|--------------------------|----------|----------|----------|----------|-------------------|
+|All files                 |      100 |      100 |      100 |      100 |                   |
+| api                      |      100 |      100 |      100 |      100 |                   |
+|  FlightsApi.js           |      100 |      100 |      100 |      100 |                   |
+| templates                |      100 |      100 |      100 |      100 |                   |
+|  FoundFlightsTemplate.js |      100 |      100 |      100 |      100 |                   |
+|  NoFlightsTemplate.js    |      100 |      100 |      100 |      100 |                   |
+|  TemplateHandler.js      |      100 |      100 |      100 |      100 |                   |
 
-## Submission:
-- Create a clone of this repository locally.
-Then push it to **your GitHub account** and continue working from there. Once you have finished, please send us the URL of the repository you have created.
+## Functional Tests (End2End)
 
-### Some things to consider:
-- We like tested code
-- We like readable code
-- We like using the latest features of ES6 where applicable
-- Last but not least, have fun!

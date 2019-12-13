@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FoundFlightsTemplate renders empty results group if none flights provided 1`] = `
+"
+<li class=\\"rw-autosuggest__results-flights\\">
+  <p class=\\"rw-autosuggest__title\\">Looking for this flight?</p>
+  <ul class=\\"rw-autosuggest-group\\">
+    
+  </ul>
+</li>
+"
+`;
+
+exports[`FoundFlightsTemplate renders empty results group if none flights provided 2`] = `
+"
+<li class=\\"rw-autosuggest__results-flights\\">
+  <p class=\\"rw-autosuggest__title\\">Looking for this flight?</p>
+  <ul class=\\"rw-autosuggest-group\\">
+    null
+  </ul>
+</li>
+"
+`;
+
+exports[`FoundFlightsTemplate renders results group with all flight information properly 1`] = `
+"
+<li class=\\"rw-autosuggest__results-flights\\">
+  <p class=\\"rw-autosuggest__title\\">Looking for this flight?</p>
+  <ul class=\\"rw-autosuggest-group\\">
+    
+<li class=\\"rw-autosuggest__results-item\\">
+  <span class=\\"rw-autosuggest-group__flightnumber\\">UA 989</span>
+  <span class=\\"rw-autosuggest-group__airport\\">San Francisco</span>
+  <div class=\\"rw-autosuggest-group__time\\">
+    <time>14:50</time>
+  </div>
+</li>
+
+  </ul>
+</li>
+"
+`;
+
+exports[`FoundFlightsTemplate renders results group with empty flight 1`] = `
+"
+<li class=\\"rw-autosuggest__results-flights\\">
+  <p class=\\"rw-autosuggest__title\\">Looking for this flight?</p>
+  <ul class=\\"rw-autosuggest-group\\">
+    
+<li class=\\"rw-autosuggest__results-item\\">
+  <span class=\\"rw-autosuggest-group__flightnumber\\">undefined</span>
+  <span class=\\"rw-autosuggest-group__airport\\">undefined</span>
+  <div class=\\"rw-autosuggest-group__time\\">
+    <time>undefined</time>
+  </div>
+</li>
+
+  </ul>
+</li>
+"
+`;

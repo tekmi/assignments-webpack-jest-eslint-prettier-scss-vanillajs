@@ -8,13 +8,11 @@ const flightTemplate = flight => `
 </li>
 `;
 
-const flightsTemplate = flights => `
+export default flights => `
 <li class="rw-autosuggest__results-flights">
   <p class="rw-autosuggest__title">Looking for this flight?</p>
   <ul class="rw-autosuggest-group">
-    ${flights.map(flightTemplate)}
+    ${flights && flights.map(flightTemplate)}
   </ul>
 </li>
 `;
-
-export default flightsTemplate;
