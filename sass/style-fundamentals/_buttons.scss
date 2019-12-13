@@ -103,3 +103,13 @@
         box-shadow: 0 .25em 0 0 $grey-storm;
     }
 }
+
+.rw-icon-button {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    color: $afternoon-blue;
+    display: inline-flex;
+    justify-content: center;
+    padding: .375rem;
+}

@@ -73,6 +73,18 @@ To see all the functional tests in action, run
 yarn test:functional:run
 ```
 
+## Styles
+
+I've tried to replicate the styles from your main website, so I `copy & paste` the selector names and extracted the juices out of it. I see you have used BEM technique there, so I tried to understand it, slicing it inside various SCSS files, basing on my guts.
+However I didn't feel so comfortable with this, so please verify if this makes sense. I would be glad to hear more from you.
+
+# Possible improvements
+
+- debounce to not call Search API too often
+- stylelint for SCSS
+- extract styles to separate files during webpack production build
+- husky for some pre-commit hooks
+
 # Miscellaneous
 
 - can be tested in IE11 [https://www.browserling.com/browse/win/7/ie/11/https%3A%2F%2Fschiphol-assignment.yum.pl%2F](https://www.browserling.com/browse/win/7/ie/11/https%3A%2F%2Fschiphol-assignment.yum.pl%2F)

@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title><%= htmlWebpackPlugin.options.title %></title>
-</head>
-<body>
-<div class="rw-wrapper">
-    <div class="rw-input-submit">
+  </head>
+  <body>
+    <div class="rw-wrapper">
+      <div class="rw-input-submit">
         <div class="rw-autosuggest">
-            <input class="rw-input-text rw-autosuggest__input rw-input-submit__input" type="search" autocapitalize="off"
-                   autocomplete="off" autocorrect="off"
-                   data-ft-element="flights-search-input"
-                   aria-label="Enter a flight number, airline or city" placeholder="E.g. UA 969 or San Francisco"
-                   name="search" value="" id="flight-search-widget-autosuggest" spellcheck="false">
-            <ol class="rw-autosuggest__results" data-ft-element="flights-search-results"></ol>
+          <input
+            id="flight-search-widget-autosuggest"
+            class="rw-input-text rw-autosuggest__input rw-input-submit__input"
+            type="search"
+            name="search"
+            value=""
+            placeholder="E.g. UA 969 or San Francisco"
+            aria-label="Enter a flight number, airline or city"
+            autocapitalize="off"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+            data-ft-element="flights-search-input"
+          />
+          <ol class="rw-autosuggest__results" data-ft-element="flights-search-results"></ol>
         </div>
-        <button class="rw-icon-button rw-input-submit__button" id="flight-search-widget-submit">
-            <svg aria-hidden="true" class="rw-icon rw-icon--search" width="24" height="24" viewBox="0 0 24 24">
-                <path fill="currentcolor"
-                      d="M19.8 18.4l-4.2-4.2a6.5 6.5 0 10-9.1 1.5 6.7 6.7 0 003.9 1.2 6.5 6.5 0 003.8-1.3l4.2 4.2a1 1 0 101.6-1.2zm-13.9-8a4.5 4.5 0 019 0 4.6 4.6 0 01-4.5 4.5 4.5 4.5 0 01-4.5-4.5z"></path>
-            </svg>
-            <span class="visually-hidden">Show</span>
+        <button class="rw-icon-button rw-input-submit__button">
+          <svg aria-hidden="true" class="rw-icon rw-icon--search" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentcolor" d="M19.8 18.4l-4.2-4.2a6.5 6.5 0 10-9.1 1.5 6.7 6.7 0 003.9 1.2 6.5 6.5 0 003.8-1.3l4.2 4.2a1 1 0 101.6-1.2zm-13.9-8a4.5 4.5 0 019 0 4.6 4.6 0 01-4.5 4.5 4.5 4.5 0 01-4.5-4.5z"></path>
+          </svg>
+          <span class="visually-hidden">Show</span>
         </button>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
